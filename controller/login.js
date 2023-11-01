@@ -24,7 +24,7 @@ export const userSignIn = async (req, res) => {
         name: existUser.name,
       },
       SECRET_KEY,
-      { expiresIn: "1d" }
+      { expiresIn: "7d" }
     );
 
     res.status(201).json({ user: existUser, token, message: true });
